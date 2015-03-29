@@ -16,7 +16,7 @@ class VanillaSession implements Session
      */
     public function __construct(array &$session = null)
     {
-        if ($session) {
+        if ($session !== null) {
             $this->session = & $session;
         } else {
             $this->session = & $_SESSION;
