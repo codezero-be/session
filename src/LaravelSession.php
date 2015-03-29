@@ -30,7 +30,7 @@ class LaravelSession implements Session
      */
     public function get($key = null)
     {
-        if ( ! $key) {
+        if ($key === null) {
             return $this->session->all();
         }
 
